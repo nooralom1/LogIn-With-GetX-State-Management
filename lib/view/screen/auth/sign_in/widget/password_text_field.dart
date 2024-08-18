@@ -9,13 +9,13 @@ class PasswordTextField extends StatelessWidget {
     return TextFormField(
       controller: passController,
       decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
           focusedBorder:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
           enabledBorder:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
           errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(20),
               borderSide: const BorderSide(color: Colors.red)),
           labelText: "Password"),
       validator: (value) {
