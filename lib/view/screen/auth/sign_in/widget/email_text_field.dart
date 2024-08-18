@@ -16,7 +16,7 @@ class EmailTextField extends StatelessWidget {
               OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.red)),
+              borderSide: const BorderSide(color: Colors.red)),
           labelText: "E-mail"),
       validator: (value) {
         if (value == "" || value == null) {

@@ -27,7 +27,7 @@ class SignIn extends StatelessWidget {
                   children: [
                     SizedBox(
                         child: Image.asset("assets/image/288694.png")),
-                    SizedBox(height: 50,),
+                    const SizedBox(height: 50,),
                     EmailTextField(
                       mailController: signInController.mailController,
                     ),
