@@ -1,7 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,7 +6,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home"),),
+      appBar: AppBar(
+        title: const Text("Home"),
+      ),
       body: const Center(),
     );
   }
