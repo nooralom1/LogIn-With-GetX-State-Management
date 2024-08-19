@@ -14,6 +14,7 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     SignInController signInController = Get.put(SignInController());
     return Scaffold(
       body: SafeArea(

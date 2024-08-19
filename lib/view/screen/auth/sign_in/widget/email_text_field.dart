@@ -7,6 +7,7 @@ class EmailTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+
       controller: mailController,
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
