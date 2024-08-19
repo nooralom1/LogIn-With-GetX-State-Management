@@ -1,7 +1,5 @@
 
-
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_with_getx/controller/api_controller/sign_in_service.dart';

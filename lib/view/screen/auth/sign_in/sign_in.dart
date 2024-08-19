@@ -8,13 +8,11 @@ import 'package:login_with_getx/view/common_widgets/common_loading_button.dart';
 import 'package:login_with_getx/view/screen/auth/sign_in/widget/email_text_field.dart';
 import 'package:login_with_getx/view/screen/auth/sign_in/widget/password_text_field.dart';
 
-
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     SignInController signInController = Get.put(SignInController());
     return Scaffold(
       body: SafeArea(
@@ -26,9 +24,10 @@ class SignIn extends StatelessWidget {
                 key: signInController.formKey,
                 child: Column(
                   children: [
-                    SizedBox(
-                        child: Image.asset("assets/image/288694.png")),
-                    const SizedBox(height: 50,),
+                    SizedBox(child: Image.asset("assets/image/288694.png")),
+                    const SizedBox(
+                      height: 50,
+                    ),
                     EmailTextField(
                       mailController: signInController.mailController,
                     ),
@@ -37,17 +36,20 @@ class SignIn extends StatelessWidget {
                       passController: signInController.passwordController,
                     ),
                     buildSizedBox(height: 10),
-              
-                    Obx(()=> signInController.isLoading.isFalse ?  CommonButton(
-                        buttonName: "Sign In",
-                        onTap: () {
-                          if (!signInController.formKey.currentState!.validate()) {
-                            return;
-                          }
-                          log("==========222222222222===============");
-                          signInController.signInFun();
-                        }) : const CommonLoadingButton()),
-              
+
+                    Obx(() => signInController.isLoading.isFalse
+                        ? CommonButton(
+                            buttonName: "Sign In",
+                            onTap: () {
+                              if (!signInController.formKey.currentState!
+                                  .validate()) {
+                                return;
+                              }
+                              log("==========222222222222===============");
+                              signInController.signInFun();
+                            })
+                        : const CommonLoadingButton()),
+
                     //
                   ],
                 ),
