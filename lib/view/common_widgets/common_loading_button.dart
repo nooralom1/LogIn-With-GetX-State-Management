@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CommonLoadingButton extends StatelessWidget {
-
   const CommonLoadingButton({
     super.key,
     this.buttonWidth,
