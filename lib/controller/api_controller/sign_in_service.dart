@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 class SignInService {
-
   static Future<bool> signIn() async {
     try {
       log("---------------Yeah -----------");
