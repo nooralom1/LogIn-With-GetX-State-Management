@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_with_getx/view/screen/auth/sign_in/sign_in.dart';
+import 'package:login_with_getx/view/screen/show_cart/show_cart.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: ShowCart(),
     );
   }
 }

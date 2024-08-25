@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_with_getx/controller/getx_controller/sign_in.dart';
+import 'package:login_with_getx/controller/getx_controller/auth/sign_in.dart';
 import 'package:login_with_getx/view/common_widgets/common_button.dart';
 import 'package:login_with_getx/view/common_widgets/common_loading_button.dart';
 import 'package:login_with_getx/view/screen/auth/sign_in/widget/email_text_field.dart';
@@ -48,7 +48,6 @@ class SignIn extends StatelessWidget {
                               signInController.signInFun();
                             })
                         : const CommonLoadingButton()),
-
                     //
                   ],
                 ),
