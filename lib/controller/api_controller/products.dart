@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
-import 'package:login_with_getx/controller/api_controller/apies/apies.dart';
+import 'package:login_with_getx/controller/api_controller/apies.dart';
 import 'package:login_with_getx/model/products.dart';
 
 class ProductsService{
