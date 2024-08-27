@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_with_getx/controller/api_controller/apies/apies.dart';
+import 'package:login_with_getx/controller/api_controller/apies.dart';
 import 'package:login_with_getx/controller/getx_controller/peoduct_details.dart';
 import 'package:login_with_getx/view/common_widgets/common_button.dart';
 import 'package:login_with_getx/view/common_widgets/common_text.dart';
