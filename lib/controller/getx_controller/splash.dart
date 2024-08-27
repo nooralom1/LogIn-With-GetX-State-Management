@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:login_with_getx/view/screen/auth/sign_up/sign_up.dart';
-import 'package:login_with_getx/view/screen/home/home.dart';
 
 class SplashController extends GetxController {
   // late AnimationController animationController;
