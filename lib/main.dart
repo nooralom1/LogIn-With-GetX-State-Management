@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_with_getx/view/screen/Splash/Splash.dart';
+import 'package:login_with_getx/view/screen/Splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
