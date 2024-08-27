@@ -20,7 +20,8 @@ class SignInService {
       if(response.statusCode==200){
         var responseData = jsonDecode(response.body);
         Get.snackbar("Message", "Login successfully  !!");
-        // await LocalStorage().writeData(key: "token", value: responseData['token']);
+        log("---------------- ${responseData['token']}");
+        await LocalStorage().writeData(key: "token", value: responseData['token']);
         // await LocalStorage().writeData(key: "userInfo", value: jsonEncode(responseData['response_data']));
         return true;
       } else if(response.statusCode == 401){

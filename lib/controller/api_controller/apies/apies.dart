@@ -4,6 +4,8 @@ class Apies{
   static String signUpUrl = "$baseUrl/api/registration";
   static String signInUrl = "$baseUrl/api/login";
   static String productsUrl = "$baseUrl/api/app/v1/products";
-  static String productsDetailsUrl = "$baseUrl/api/app/v1/products/show/2";
+  static String productsDetailsUrl = "$baseUrl/api/app/v1/products/show";
   static String showCartsUrl = "$baseUrl/api/app/v1/cart/list";
+  static String addToCartsUrl = "$baseUrl/api/app/v1/add-to-cart";
+  static String deleteFromCartsUrl = "$baseUrl/api/app/v1/cart/delete";
 }

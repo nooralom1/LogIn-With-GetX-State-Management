@@ -1,15 +1,17 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_with_getx/controller/api_controller/apies/apies.dart';
 import 'package:login_with_getx/controller/getx_controller/peoduct_details.dart';
 import 'package:login_with_getx/view/common_widgets/common_button.dart';
 import 'package:login_with_getx/view/common_widgets/common_text.dart';
-import 'package:login_with_getx/view/screen/home/home.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails({
-    super.key,
+    super.key, required this.id,
   });
+
+  final int id;
 
   @override
   Widget build(BuildContext context) {
@@ -109,9 +111,9 @@ class ProductDetails extends StatelessWidget {
                     ),
                     CommonButton(
                         buttonName: "Add to cart",
-                        onTap: () {
-                          Get.snackbar("message", "Add Successfully !");
-                          Get.off(() => const Home());
+                        onTap: () async{
+                          controller.addToCartFunction(id: id);
+                          // Get.off(() => const Home());
                         })
                   ],
                 ),
