@@ -48,10 +48,10 @@ class Home extends StatelessWidget {
                 child: GridView.builder(
                     itemCount: controller.products?.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
+                        crossAxisCount: 2,
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
-                        childAspectRatio: 0.5),
+                        childAspectRatio: 0.6),
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
@@ -74,10 +74,10 @@ class Home extends StatelessWidget {
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 100,
+                                height: 150,
                                 width: double.maxFinite,
                                 child: Image.network(
-                                    "https://cit-ecommerce-codecanyon.bandhantrade.com/${controller.products?[index].image}"),
+                                    "https://cit-ecommerce-codecanyon.bandhantrade.com/${controller.products?[index].image}",fit: BoxFit.fill,),
                               ),
                               const SizedBox(
                                 height: 10,
