@@ -1,2 +1,16 @@
-![Colorful Ombre Four Timestable Multiplication Quiz Presentation ](https://github.com/user-attachments/assets/4b07d791-d52a-4f8d-a549-d081719e96f3)
-![Colorful Ombre Four Timestable Multiplication Quiz Presentation (1)](https://github.com/user-attachments/assets/ed5d987f-1110-45ea-8619-c80883bdc55f)
+# laundry_app_using_getx
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
