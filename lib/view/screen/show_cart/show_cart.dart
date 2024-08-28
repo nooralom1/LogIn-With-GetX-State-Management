@@ -11,7 +11,6 @@ class ShowCart extends StatefulWidget {
 }
 
 class _ShowCartState extends State<ShowCart> {
-  int counter = 1;
   @override
   Widget build(BuildContext context) {
     ShowCartController controller = Get.put(ShowCartController());
@@ -39,18 +38,21 @@ class _ShowCartState extends State<ShowCart> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SizedBox(
-                            height: 110,
-                              width: 120,
+                            height: 100,
+                              width: 100,
                               child: Image.network("${Apies.baseUrl}/${controller.productCart?[index].productImage}",fit: BoxFit.fill,)),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("id: ${controller.productCart?[index].productId}"),
-                              Text("Nmae: ${controller.productCart?[index].productName?.en}"),
-                              Text("price: ${controller.productCart?[index].salePrice}"),
-                              Text("Quantity: ${controller.productCart?[index].quantity}"),
-                            ],
+                          SizedBox(
+                            width: 120,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("id: ${controller.productCart?[index].productId}"),
+                                Text("Nmae: ${controller.productCart?[index].productName?.en}"),
+                                Text("price: ${controller.productCart?[index].salePrice}"),
+                                Text("Quantity: ${controller.productCart?[index].quantity}"),
+                              ],
+                            ),
                           ),
                           IconButton(
                             onPressed: () {
@@ -64,12 +66,11 @@ class _ShowCartState extends State<ShowCart> {
                               color: Colors.deepOrange,
                             ),
                           ),
-                          Column(
+                          Obx(()=>Column(
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    counter++;
-                                    setState(() {});
+                                    controller.qty.value++;
                                   },
                                   icon: const Icon(
                                     Icons.add,
@@ -79,14 +80,15 @@ class _ShowCartState extends State<ShowCart> {
                               const SizedBox(
                                 width: 10,
                               ),
-                              Text("$counter"),
+                              Text("${controller.qty.value}"),
                               const SizedBox(
                                 width: 10,
                               ),
                               IconButton(
-                                  onPressed: () {
-                                    counter--;
-                                    setState(() {});
+                                  onPressed: ()async{
+                                    if (controller.qty.value > 1) {
+                                      controller.qty.value --;
+                                    }
                                   },
                                   icon: const Icon(
                                     Icons.remove,
@@ -94,7 +96,7 @@ class _ShowCartState extends State<ShowCart> {
                                     color: Colors.deepOrange,
                                   )),
                             ],
-                          ),
+                          ),)
                         ],
                       ),
                     );
