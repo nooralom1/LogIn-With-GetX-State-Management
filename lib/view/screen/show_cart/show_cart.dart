@@ -70,7 +70,7 @@ class _ShowCartState extends State<ShowCart> {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    controller.qty.value++;
+                                    controller.counter.value++;
                                   },
                                   icon: const Icon(
                                     Icons.add,
@@ -80,14 +80,14 @@ class _ShowCartState extends State<ShowCart> {
                               const SizedBox(
                                 width: 10,
                               ),
-                              Text("${controller.qty.value}"),
+                              Text("${controller.counter.value}"),
                               const SizedBox(
                                 width: 10,
                               ),
                               IconButton(
                                   onPressed: ()async{
-                                    if (controller.qty.value > 1) {
-                                      controller.qty.value --;
+                                    if (controller.counter.value > 1) {
+                                      controller.counter.value --;
                                     }
                                   },
                                   icon: const Icon(
