@@ -6,7 +6,7 @@ import 'package:login_with_getx/model/show_cart.dart';
 class ShowCartController extends GetxController{
   List<ProductCart>? productCart;
   RxBool isLoading = false.obs;
-  RxInt qty = 1.obs;
+  RxInt counter = 1.obs;
 
   getShowCart()async{
     isLoading.value = true;
