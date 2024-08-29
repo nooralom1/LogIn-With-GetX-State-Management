@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:login_with_getx/controller/local_storage/local_storage.dart';
+import 'package:login_with_getx/firebase/user_add/user_add.dart';
 import 'package:login_with_getx/view/screen/auth/sign_up/sign_up.dart';
 import 'package:login_with_getx/view/screen/home/home.dart';
 
@@ -18,9 +19,9 @@ class SplashController extends GetxController {
     String token =  await  LocalStorage().readData(key: "token") ?? "";
     await Future.delayed(const Duration(seconds: 2));
     if(token.isNotEmpty || token != ""){
-      Get.to(() => const Home());
+      Get.to(() => const UserAdd());
     }else{
-      Get.to(() => const SignUp());
+      Get.to(() => const UserAdd());
     }
 
   }
