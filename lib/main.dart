@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_with_getx/view/screen/Splash/Splash.dart';
 import 'firebase/firebase_settings.dart';
+import 'flutter_lifecycle.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: AppLifecycleScreen(),
     );
   }
 }
