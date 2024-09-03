@@ -1,4 +1,4 @@
-# login_with_getx
+# laundry_app_using_getx
 
 A new Flutter project.
 
