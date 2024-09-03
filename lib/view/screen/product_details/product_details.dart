@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_with_getx/controller/api_controller/apies/apies.dart';
 import 'package:login_with_getx/controller/getx_controller/peoduct_details.dart';
 import 'package:login_with_getx/view/common_widgets/common_button.dart';
 import 'package:login_with_getx/view/common_widgets/common_text.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails({
-    super.key, required this.id,
+    super.key,
+    required this.id,
   });
 
   final int id;
@@ -54,7 +53,7 @@ class ProductDetails extends StatelessWidget {
                                   child: SizedBox(
                                     width: 120,
                                     child: Image.network(
-                                      "${Apies.baseUrl}/${controller.image[index]}",
+                                      "${"Apies.baseUrl"}/${controller.image[index]}",
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -111,7 +110,7 @@ class ProductDetails extends StatelessWidget {
                     ),
                     CommonButton(
                         buttonName: "Add to cart",
-                        onTap: () async{
+                        onTap: () async {
                           controller.addToCartFunction(id: id);
                           // Get.off(() => const Home());
                         })
