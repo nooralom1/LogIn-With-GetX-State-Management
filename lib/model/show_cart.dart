@@ -38,12 +38,12 @@ class ProductCart {
 
   ProductCart(
       {this.productId,
-        this.productImage,
-        this.productName,
-        this.discountType,
-        this.discountPrice,
-        this.salePrice,
-        this.quantity});
+      this.productImage,
+      this.productName,
+      this.discountType,
+      this.discountPrice,
+      this.salePrice,
+      this.quantity});
 
   ProductCart.fromJson(Map<String, dynamic> json) {
     productId = json['product_id'];
