@@ -19,9 +19,6 @@ class DeleteFromCartService {
       var response =
           await http.post(url, body: jsonEncode(body), headers: header);
 
-      log("============== ${response.statusCode}");
-      log("============== ${response.body}");
-
       if (response.statusCode == 201) {
         // Get.snackbar("Message", "Added successfully  !!");
         return true;
