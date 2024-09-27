@@ -1,5 +1,4 @@
-class Apies{
-
+class Apies {
   static String baseUrl = "https://cit-ecommerce-codecanyon.bandhantrade.com";
   static String signUpUrl = "$baseUrl/api/registration";
   static String signInUrl = "$baseUrl/api/login";
