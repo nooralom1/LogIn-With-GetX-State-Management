@@ -10,7 +10,7 @@ class AddUserController extends GetxController {
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   RxBool isLoading = false.obs;
-  RxList<Map<String,dynamic>> userList = <Map<String,dynamic>>[].obs;
+  RxList<Map<String, dynamic>> userList = <Map<String, dynamic>>[].obs;
 
   addUserFun() async {
     log("=========== Call ====================");
@@ -27,7 +27,6 @@ class AddUserController extends GetxController {
   }
 
   getAllUser() async {
-
     QuerySnapshot<Map<String, dynamic>>? data =
         await GetAllUserFirebaseService.getUserService();
 
@@ -37,16 +36,12 @@ class AddUserController extends GetxController {
       for (var i in data.docs.toList()) {
         log("========== a : ${i["name"]} ============");
         log("========== a : ${i["phone"]} ============");
-        var returnData = {
-          "name" : i['name'],
-          "phone" : i['phone']
-        };
+        var returnData = {"name": i['name'], "phone": i['phone']};
         userList.add(returnData);
       }
     }
     return data;
   }
-
 
   @override
   void onInit() {
