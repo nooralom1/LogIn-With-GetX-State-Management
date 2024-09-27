@@ -1,6 +1,6 @@
-
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
-import 'package:flutter/foundation.dart' show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter/foundation.dart'
+    show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
@@ -15,17 +15,17 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
-              'you can reconfigure this by running the FlutterFire CLI again.',
+          'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
-              'you can reconfigure this by running the FlutterFire CLI again.',
+          'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
-              'you can reconfigure this by running the FlutterFire CLI again.',
+          'you can reconfigure this by running the FlutterFire CLI again.',
         );
       default:
         throw UnsupportedError(
@@ -43,8 +43,6 @@ class DefaultFirebaseOptions {
     storageBucket: 'salespro-19e86.appspot.com',
   );
 
-
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyATUTT5PSfgGRa-4rwTBKrgfAyMrIRnI5g',
     appId: '1:22074172343:android:787c25edf41b35d5ba7e32',
@@ -53,14 +51,14 @@ class DefaultFirebaseOptions {
     storageBucket: 'classic-ecommerce-f3ca9.appspot.com',
   );
 
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC2DS3REO61nzIYOijW4GOHmyemlQrr4QI',
     appId: '1:453829112125:ios:a65a63d927a1f664e6d554',
     messagingSenderId: '453829112125',
     projectId: 'salespro-19e86',
     storageBucket: 'salespro-19e86.appspot.com',
-    iosClientId: '453829112125-s8knjn86uhrqbp426m4vge5tj545mlc4.apps.googleusercontent.com',
+    iosClientId:
+        '453829112125-s8knjn86uhrqbp426m4vge5tj545mlc4.apps.googleusercontent.com',
     iosBundleId: 'com.maantheme.mobilepos.mobilePos',
   );
 }
