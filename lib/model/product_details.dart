@@ -27,10 +27,10 @@ class ProductDetails {
 
   ProductDetails(
       {this.rating,
-        this.review,
-        this.productStock,
-        this.images,
-        this.description});
+      this.review,
+      this.productStock,
+      this.images,
+      this.description});
 
   ProductDetails.fromJson(Map<String, dynamic> json) {
     rating = json['rating'];
